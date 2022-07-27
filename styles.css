@@ -1,0 +1,53 @@
+html {
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+body {
+    height: 100vh;
+    background-color: lightgray;
+    margin: 0;
+    position: relative;
+}
+
+#piano {
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    margin: auto;
+    width: 358px;
+    height: 290px;
+    padding: 90px 20px 0 20px;
+    border-radius: 10px;
+    background-color: #00471b;
+}
+
+.container {
+    display: flex;
+    width: 318px;
+    height: 180px;
+    background-color: black;
+    padding: 0 2px 2px 2px;
+}
+
+kbd {
+    background-color: white;
+    margin: 1px;
+    /* Not necessary to set a border, but required by the correction system.
+       Remove and add one to margin */
+    border: 1px solid black;
+    border-radius: 0 0 4px 4px;
+    flex-grow: 1;
+    text-align: center;
+    line-height: 280px;
+}
+
+#logo {
+    width: 200px;
+    position: absolute;
+    top: 23px;
+    color: #F5F5F5;
+    font-size: 1.3rem;
+}
