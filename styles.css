@@ -44,62 +44,18 @@ kbd {
 
 .white-keys kbd {
     background-color: white;
-    margin: 1px;
-    /* Not necessary to set a border, but required by the correction system.
-       Remove and add one to margin */
-    border: 1px solid black;
+    margin: 2px;
     border-radius: 0 0 4px 4px;
     flex-grow: 1;
     text-align: center;
     line-height: 280px;
 }
 
-/* This is because the correction system says that in .black-keys must be only five elements. I use a trick with flex,
-    putting a invisible span between the second and third black key. Forget about the six following rules and uncomment
-    the three following these six and the span in .black-keys div in the html.
-*/
 .black-keys {
     position: absolute;
-    top: 0;
+    top: 2px;
     left: 29px; /* half width of white key plus margin/border */
     width: 259px; /* width of container - 2*(width of white key + margin/border) */
-}
-
-.black-keys kbd {
-    --position-second: 45.5px;
-    position: absolute;
-    display: inline-block;
-    width: 32px;
-    height: 100px;
-    /* background-color: #1d1e22; */
-    background-color: black;
-    color: white;
-    text-align: center;
-    line-height: 130px;
-    border-radius: 0% 0% 4% 4%;
-}
-
-.black-keys kbd:nth-child(2) {
-    left: var(--position-second);
-}
-
-.black-keys kbd:nth-child(3) {
-    left: calc(var(--position-second) * 3);
-}
-
-.black-keys kbd:nth-child(4) {
-    left: calc(var(--position-second) * 4);
-}
-
-.black-keys kbd:nth-child(5) {
-    left: calc(var(--position-second) * 5);
-}
-
-/*.black-keys {
-    position: absolute;
-    top: 0;
-    left: 29px; !* half width of white key plus margin/border *!
-    width: 259px; !* width of container - 2*(width of white key + margin/border) *!
     height: 100px;
     display: flex;
     justify-content: space-between;
@@ -114,8 +70,10 @@ kbd {
     color: white;
     text-align: center;
     line-height: 130px;
-    border-radius: 0% 0% 4% 4%;
-}*/
+    border-radius: 0 0 4% 4%;
+    border: 2px solid black;
+    border-top: none;
+}
 
 #logo {
     width: 200px;
